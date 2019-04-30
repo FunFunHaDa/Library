@@ -1,0 +1,16 @@
+C:\Users\JinHo\Source\Repos\13장-주석달기\Library\Library\bin\Debug\Library.exe.config
+C:\Users\JinHo\Source\Repos\13장-주석달기\Library\Library\bin\Debug\Library.exe
+C:\Users\JinHo\Source\Repos\13장-주석달기\Library\Library\bin\Debug\Library.pdb
+C:\Users\JinHo\Source\Repos\13장-주석달기\Library\Library\obj\Debug\Library2.csprojAssemblyReference.cache
+C:\Users\JinHo\Source\Repos\13장-주석달기\Library\Library\obj\Debug\Library.Form1.resources
+C:\Users\JinHo\Source\Repos\13장-주석달기\Library\Library\obj\Debug\Library.Form2.resources
+C:\Users\JinHo\Source\Repos\13장-주석달기\Library\Library\obj\Debug\Library.Form3.resources
+C:\Users\JinHo\Source\Repos\13장-주석달기\Library\Library\obj\Debug\Library.Properties.Resources.resources
+C:\Users\JinHo\Source\Repos\13장-주석달기\Library\Library\obj\Debug\Library2.csproj.GenerateResource.cache
+C:\Users\JinHo\Source\Repos\13장-주석달기\Library\Library\obj\Debug\Library2.csproj.CoreCompileInputs.cache
+C:\Users\JinHo\Source\Repos\13장-주석달기\Library\Library\obj\Debug\Library.exe
+C:\Users\JinHo\Source\Repos\13장-주석달기\Library\Library\obj\Debug\Library.pdb
+C:\Users\JinHo\Source\Repos\13장-주석달기\Library\Library\bin\Debug\Newtonsoft.Json.dll
+C:\Users\JinHo\Source\Repos\13장-주석달기\Library\Library\bin\Debug\Newtonsoft.Json.pdb
+C:\Users\JinHo\Source\Repos\13장-주석달기\Library\Library\bin\Debug\Newtonsoft.Json.xml
+C:\Users\JinHo\Source\Repos\13장-주석달기\Library\Library\obj\Debug\Library2.csproj.CopyComplete
