@@ -18,7 +18,6 @@ class DataManager
             try
             {
                 Load();
-
             }
             catch(Exception)
             {
@@ -41,6 +40,7 @@ class DataManager
                             Page = int.Parse(item.Element("page").Value),
                             BorrowedAt = DateTime.Parse(item.Element("borrowedAt").Value),
                             isBorrowed = item.Element("isBorrowed").Value != "0" ? true : false, // 삼항조건부 연산자
+                            Image = item.Element("Image").Value,//
                             UserId = int.Parse(item.Element("userId").Value),
                             UserName = item.Element("userName").Value
                         }).ToList<Book>();
@@ -71,11 +71,12 @@ class DataManager
         {
             booksOutput += "<book>\n";
             booksOutput += "  <isbn>" + item.Isbn + "</isbn>\n";
-            booksOutput += "  <name>" + item.Title + "</name>\n";
+            booksOutput += "  <name>" + item.Title.Replace("&", "&amp;") + "</name>\n";
             booksOutput += "  <publisher>" + item.Publisher + "</publisher>\n";
             booksOutput += "  <page>" + item.Page + "</page>\n";
             booksOutput += "  <borrowedAt>" + item.BorrowedAt.ToLongDateString() + "</borrowedAt>\n";
             booksOutput += "  <isBorrowed>" + (item.isBorrowed ? 1 : 0) + "</isBorrowed>\n"; // 삼항 조건부 연산자
+            booksOutput += "  <Image>" + item.Image.Replace("&","&amp;") + "</Image>\n"; // xml에 &연산자는 안된다 &amp
             booksOutput += "  <userId>" + item.UserId + "</userId>\n";
             booksOutput += "  <userName>" + item.UserName + "</userName>\n";
             booksOutput += "</book>\n";
@@ -103,13 +104,9 @@ class DataManager
         //////////////////////////////
         public static void SaveInit()
         {
-          
-
             // 저장
             File.WriteAllText(@"./Books.xml", "");
             File.WriteAllText(@"./Users.xml", "");
-           
         }
-
     }
 }

@@ -20,9 +20,10 @@ namespace Library
 {
     public partial class Form2 : Form
     {
-        ///////////////////////////////////////////
+        //
         List<Book> Books_Naver = new List<Book>(); // xml
         IList<Book> Books_Daum = new List<Book>(); // json
+        public static string imageurl = "";
 
         public static bool NaverBool = false;
         public static bool DaumBool = false;
@@ -32,36 +33,44 @@ namespace Library
             InitializeComponent();
             Text = "도서 관리";
 
-
             // 그림
             pictureBox1.Size = new System.Drawing.Size(100, 150);
             pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox1.BorderStyle = BorderStyle.Fixed3D;
+
+            pictureBox2.Size = new System.Drawing.Size(100, 150);
+            pictureBox2.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox2.BorderStyle = BorderStyle.Fixed3D;
 
             // 데이터 그리드 설정
             dataGridView1.DataSource = DataManager.Books;
             dataGridView1.CurrentCellChanged += DataGridView1_CurrentCellChanged;
             dataGridView2.CurrentCellChanged += DataGridView2_CurrentCellChanged; // 갱신 
 
-            // 버튼 설정
+            // 버튼 설정 // 추가 버튼
             button1.Click += (sender, e) =>
             {
-            // 추가 버튼
-            try
+                try
                 {
                     if (DataManager.Books.Exists((x) => x.Isbn == textBox1.Text)) // Exists(), 리스트에 조건에 맞는 객체가 있는지 확인, 
-                {
+                    {
                         MessageBox.Show("이미 존재하는 도서입니다");
                     }
                     else
                     {
+
                         Book book = new Book()
                         {
+
                             Isbn = textBox1.Text,
                             Title = textBox2.Text,
                             Publisher = textBox3.Text,
-                            Page = int.Parse(textBox4.Text)
+                            Page = int.Parse(textBox4.Text),
+                            Image = imageurl
                         };
+
+                        // MessageBox.Show(imageurl);
+
                         DataManager.Books.Add(book);
 
                         dataGridView1.DataSource = null;
@@ -71,14 +80,14 @@ namespace Library
                 }
                 catch (Exception exception)
                 {
-
+                    MessageBox.Show("추가버튼\n" + exception);
                 }
             };
 
+            // 수정 버튼
             button2.Click += (sender, e) =>
             {
-            // 수정 버튼
-            try
+                try
                 {
                     Book book = DataManager.Books.Single((x) => x.Isbn == textBox1.Text);
                     book.Title = textBox2.Text;
@@ -95,10 +104,11 @@ namespace Library
                 }
             };
 
+            // 삭제 버튼
             button3.Click += (sender, e) =>
             {
-            // 삭제 버튼
-            try
+
+                try
                 {
                     Book book = DataManager.Books.Single((x) => x.Isbn == textBox1.Text);
                     DataManager.Books.Remove(book);
@@ -113,24 +123,27 @@ namespace Library
                 }
             };
         }
-
+        // 추가된 도서
         private void DataGridView1_CurrentCellChanged(object sender, EventArgs e)
         {
             try
             {
                 // 그리드의 셀이 선택되면 텍스트박스에 글자 지정
+
                 Book book = dataGridView1.CurrentRow.DataBoundItem as Book;
                 textBox1.Text = book.Isbn;
                 textBox2.Text = book.Title;
                 textBox3.Text = book.Publisher;
                 textBox4.Text = book.Page.ToString();
+                pictureBox1.LoadAsync(book.Image);
             }
             catch (Exception exception)
             {
-
+                // MessageBox.Show("추가된 도서" + exception);
             }
         }
-        /////////////////////////////////////////////////////////////////
+
+        // 검색된 도서
         private void DataGridView2_CurrentCellChanged(object sender, EventArgs e)
         {
             try
@@ -141,11 +154,12 @@ namespace Library
                 textBox2.Text = book.Title;
                 textBox3.Text = book.Publisher;
                 textBox4.Text = book.Page.ToString();
-                pictureBox1.LoadAsync(book.Image);
+                imageurl = book.Image; // 이미지 주소 저장
+                pictureBox2.LoadAsync(book.Image);
             }
             catch (Exception exception)
             {
-
+                MessageBox.Show("검색된 도서" + exception);
             }
         }
 
@@ -235,7 +249,6 @@ namespace Library
             catch
             {
                 MessageBox.Show("잘못된 접근입니다.");
-
             }
         }
 
@@ -251,6 +264,6 @@ namespace Library
             DaumBool = true;
         }
 
-     
+
     }
 }
