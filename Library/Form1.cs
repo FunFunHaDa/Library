@@ -19,6 +19,11 @@ namespace Library
             InitializeComponent();
             Text = "도서관 관리";
 
+            // 그림
+            pictureBox1.Size = new System.Drawing.Size(80, 80);
+            pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox1.BorderStyle = BorderStyle.Fixed3D;
+
             try//////////////////////////////
             {
             // 라벨 설정
@@ -36,7 +41,6 @@ namespace Library
              
             // 데이터 그리드 설정
             dataGridView1.DataSource = DataManager.Books;
-                
              dataGridView2.DataSource = DataManager.Users;
     
 
@@ -66,6 +70,7 @@ namespace Library
                 Book book = dataGridView1.CurrentRow.DataBoundItem as Book;
                 textBox1.Text = book.Isbn;
                 textBox2.Text = book.Title;
+                pictureBox1.LoadAsync(book.Image);
                 // textBox3.Text = book.UserId.ToString();
             }
             catch (Exception exception)
