@@ -48,33 +48,33 @@
   <name> 게이머즈 Gamer'z 2019.4</name>
   <publisher>게임문화</publisher>
   <page>138</page>
-  <borrowedAt>0001년 1월 1일 월요일</borrowedAt>
-  <isBorrowed>0</isBorrowed>
+  <borrowedAt>2019년 5월 1일 수요일</borrowedAt>
+  <isBorrowed>1</isBorrowed>
   <Image>https://bookthumb-phinf.pstatic.net/cover/147/331/14733174.jpg?type=m1&amp;udate=20190409</Image>
-  <userId>0</userId>
-  <userName></userName>
+  <userId>2</userId>
+  <userName>정형돈</userName>
 </book>
 <book>
   <isbn>9788954648646</isbn>
   <name>Z교시</name>
   <publisher>문학동네</publisher>
   <page>105</page>
-  <borrowedAt>0001년 1월 1일 월요일</borrowedAt>
-  <isBorrowed>0</isBorrowed>
+  <borrowedAt>2019년 5월 1일 수요일</borrowedAt>
+  <isBorrowed>1</isBorrowed>
   <Image>https://bookthumb-phinf.pstatic.net/cover/126/563/12656364.jpg?type=m1&amp;udate=20180501</Image>
-  <userId>0</userId>
-  <userName></userName>
+  <userId>2</userId>
+  <userName>정형돈</userName>
 </book>
 <book>
   <isbn>9788954439725</isbn>
   <name>메이드 인 강남</name>
   <publisher>네오픽션</publisher>
   <page>0</page>
-  <borrowedAt>0001년 1월 1일 월요일</borrowedAt>
-  <isBorrowed>0</isBorrowed>
+  <borrowedAt>2019년 5월 8일 수요일</borrowedAt>
+  <isBorrowed>1</isBorrowed>
   <Image>https://bookthumb-phinf.pstatic.net/cover/145/322/14532297.jpg?type=m1&amp;udate=20190315</Image>
-  <userId>0</userId>
-  <userName></userName>
+  <userId>1</userId>
+  <userName>김진호</userName>
 </book>
 <book>
   <isbn>9791164050062</isbn>
@@ -161,6 +161,50 @@
   <borrowedAt>0001년 1월 1일 월요일</borrowedAt>
   <isBorrowed>0</isBorrowed>
   <Image>https://search1.kakaocdn.net/thumb/R120x174.q85/?fname=http%3A%2F%2Ft1.daumcdn.net%2Flbook%2Fimage%2F690663%3Ftimestamp%3D20190124095731</Image>
+  <userId>0</userId>
+  <userName></userName>
+</book>
+<book>
+  <isbn>9791195097586</isbn>
+  <name>2019 기분파 지게차운전기능사 필기 (최신법령개정포함+시험직전쪽집게172선, 실기코스및작업요령수록(카페무료동영상제공), 개정판)</name>
+  <publisher>에듀웨이</publisher>
+  <page>140</page>
+  <borrowedAt>2019년 5월 9일 목요일</borrowedAt>
+  <isBorrowed>1</isBorrowed>
+  <Image>https://bookthumb-phinf.pstatic.net/cover/083/863/08386345.jpg?type=m1&amp;udate=20180809</Image>
+  <userId>1</userId>
+  <userName>김진호</userName>
+</book>
+<book>
+  <isbn>9791160506273</isbn>
+  <name>시나공 컴퓨터활용능력 1급 필기 (2019,필수암기집+기출문제+동영상강의+기억상자 암기프로그램+기출CBT,2급 포함)</name>
+  <publisher>길벗</publisher>
+  <page>300</page>
+  <borrowedAt>2019년 5월 9일 목요일</borrowedAt>
+  <isBorrowed>1</isBorrowed>
+  <Image>https://bookthumb-phinf.pstatic.net/cover/142/001/14200112.jpg?type=m1&amp;udate=20181122</Image>
+  <userId>1</userId>
+  <userName>김진호</userName>
+</book>
+<book>
+  <isbn>9791189344429</isbn>
+  <name>연봉 3천 구 과장은 어떻게 월급만으로 부동산 투자를 했을까?</name>
+  <publisher>원앤원북스</publisher>
+  <page>160</page>
+  <borrowedAt>0001년 1월 1일 월요일</borrowedAt>
+  <isBorrowed>0</isBorrowed>
+  <Image>https://bookthumb-phinf.pstatic.net/cover/144/660/14466045.jpg?type=m1&amp;udate=20190131</Image>
+  <userId>0</userId>
+  <userName></userName>
+</book>
+<book>
+  <isbn>9788972215608</isbn>
+  <name>식빵을 맛있게 먹는 99가지 방법 (간편하게 만들어 맛있게 즐기는 시크릿 레시피 공개!)</name>
+  <publisher>진선BOOKS</publisher>
+  <page>99</page>
+  <borrowedAt>0001년 1월 1일 월요일</borrowedAt>
+  <isBorrowed>0</isBorrowed>
+  <Image>https://bookthumb-phinf.pstatic.net/cover/134/945/13494537.jpg?type=m1&amp;udate=20181115</Image>
   <userId>0</userId>
   <userName></userName>
 </book>

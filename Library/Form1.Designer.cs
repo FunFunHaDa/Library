@@ -41,24 +41,6 @@
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.Title = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.dataGridView2 = new System.Windows.Forms.DataGridView();
-            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.도서관리ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.사용자관리ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.label9 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label10 = new System.Windows.Forms.Label();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.label11 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nameDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.userBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.isbnDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.publisherDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pageDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -67,16 +49,34 @@
             this.isBorrowedDataGridViewCheckBoxColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.borrowedAtDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.bookBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nameDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.userBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.도서관리ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.사용자관리ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.label10 = new System.Windows.Forms.Label();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.label11 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bookBindingSource)).BeginInit();
             this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.userBindingSource)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.groupBox4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.userBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bookBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -89,9 +89,9 @@
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Location = new System.Drawing.Point(12, 27);
+            this.groupBox1.Location = new System.Drawing.Point(12, 31);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(300, 110);
+            this.groupBox1.Size = new System.Drawing.Size(300, 117);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "도서관 현황";
@@ -171,7 +171,7 @@
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.dataGridView1);
-            this.groupBox2.Location = new System.Drawing.Point(12, 143);
+            this.groupBox2.Location = new System.Drawing.Point(12, 154);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(983, 320);
             this.groupBox2.TabIndex = 1;
@@ -204,10 +204,56 @@
             this.Title.HeaderText = "Title";
             this.Title.Name = "Title";
             // 
+            // isbnDataGridViewTextBoxColumn
+            // 
+            this.isbnDataGridViewTextBoxColumn.DataPropertyName = "Isbn";
+            this.isbnDataGridViewTextBoxColumn.HeaderText = "Isbn";
+            this.isbnDataGridViewTextBoxColumn.Name = "isbnDataGridViewTextBoxColumn";
+            // 
+            // publisherDataGridViewTextBoxColumn
+            // 
+            this.publisherDataGridViewTextBoxColumn.DataPropertyName = "Publisher";
+            this.publisherDataGridViewTextBoxColumn.HeaderText = "Publisher";
+            this.publisherDataGridViewTextBoxColumn.Name = "publisherDataGridViewTextBoxColumn";
+            // 
+            // pageDataGridViewTextBoxColumn
+            // 
+            this.pageDataGridViewTextBoxColumn.DataPropertyName = "Page";
+            this.pageDataGridViewTextBoxColumn.HeaderText = "Page";
+            this.pageDataGridViewTextBoxColumn.Name = "pageDataGridViewTextBoxColumn";
+            // 
+            // userIdDataGridViewTextBoxColumn
+            // 
+            this.userIdDataGridViewTextBoxColumn.DataPropertyName = "UserId";
+            this.userIdDataGridViewTextBoxColumn.HeaderText = "UserId";
+            this.userIdDataGridViewTextBoxColumn.Name = "userIdDataGridViewTextBoxColumn";
+            // 
+            // userNameDataGridViewTextBoxColumn
+            // 
+            this.userNameDataGridViewTextBoxColumn.DataPropertyName = "UserName";
+            this.userNameDataGridViewTextBoxColumn.HeaderText = "UserName";
+            this.userNameDataGridViewTextBoxColumn.Name = "userNameDataGridViewTextBoxColumn";
+            // 
+            // isBorrowedDataGridViewCheckBoxColumn
+            // 
+            this.isBorrowedDataGridViewCheckBoxColumn.DataPropertyName = "isBorrowed";
+            this.isBorrowedDataGridViewCheckBoxColumn.HeaderText = "isBorrowed";
+            this.isBorrowedDataGridViewCheckBoxColumn.Name = "isBorrowedDataGridViewCheckBoxColumn";
+            // 
+            // borrowedAtDataGridViewTextBoxColumn
+            // 
+            this.borrowedAtDataGridViewTextBoxColumn.DataPropertyName = "BorrowedAt";
+            this.borrowedAtDataGridViewTextBoxColumn.HeaderText = "BorrowedAt";
+            this.borrowedAtDataGridViewTextBoxColumn.Name = "borrowedAtDataGridViewTextBoxColumn";
+            // 
+            // bookBindingSource
+            // 
+            this.bookBindingSource.DataSource = typeof(Library.Book);
+            // 
             // groupBox3
             // 
             this.groupBox3.Controls.Add(this.dataGridView2);
-            this.groupBox3.Location = new System.Drawing.Point(12, 469);
+            this.groupBox3.Location = new System.Drawing.Point(12, 480);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(983, 245);
             this.groupBox3.TabIndex = 3;
@@ -227,6 +273,22 @@
             this.dataGridView2.RowTemplate.Height = 23;
             this.dataGridView2.Size = new System.Drawing.Size(971, 219);
             this.dataGridView2.TabIndex = 2;
+            // 
+            // idDataGridViewTextBoxColumn
+            // 
+            this.idDataGridViewTextBoxColumn.DataPropertyName = "Id";
+            this.idDataGridViewTextBoxColumn.HeaderText = "Id";
+            this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
+            // 
+            // nameDataGridViewTextBoxColumn1
+            // 
+            this.nameDataGridViewTextBoxColumn1.DataPropertyName = "Name";
+            this.nameDataGridViewTextBoxColumn1.HeaderText = "Name";
+            this.nameDataGridViewTextBoxColumn1.Name = "nameDataGridViewTextBoxColumn1";
+            // 
+            // userBindingSource
+            // 
+            this.userBindingSource.DataSource = typeof(Library.User);
             // 
             // menuStrip1
             // 
@@ -266,10 +328,20 @@
             this.groupBox4.Controls.Add(this.label11);
             this.groupBox4.Location = new System.Drawing.Point(318, 31);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(647, 110);
+            this.groupBox4.Size = new System.Drawing.Size(348, 117);
             this.groupBox4.TabIndex = 12;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "대여/반납";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Location = new System.Drawing.Point(3, 24);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(80, 86);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 15;
+            this.pictureBox1.TabStop = false;
             // 
             // label9
             // 
@@ -337,78 +409,6 @@
             this.label11.TabIndex = 0;
             this.label11.Text = "Isbn";
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Location = new System.Drawing.Point(3, 24);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(0);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(80, 80);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 15;
-            this.pictureBox1.TabStop = false;
-            // 
-            // idDataGridViewTextBoxColumn
-            // 
-            this.idDataGridViewTextBoxColumn.DataPropertyName = "Id";
-            this.idDataGridViewTextBoxColumn.HeaderText = "Id";
-            this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
-            // 
-            // nameDataGridViewTextBoxColumn1
-            // 
-            this.nameDataGridViewTextBoxColumn1.DataPropertyName = "Name";
-            this.nameDataGridViewTextBoxColumn1.HeaderText = "Name";
-            this.nameDataGridViewTextBoxColumn1.Name = "nameDataGridViewTextBoxColumn1";
-            // 
-            // userBindingSource
-            // 
-            this.userBindingSource.DataSource = typeof(Library.User);
-            // 
-            // isbnDataGridViewTextBoxColumn
-            // 
-            this.isbnDataGridViewTextBoxColumn.DataPropertyName = "Isbn";
-            this.isbnDataGridViewTextBoxColumn.HeaderText = "Isbn";
-            this.isbnDataGridViewTextBoxColumn.Name = "isbnDataGridViewTextBoxColumn";
-            // 
-            // publisherDataGridViewTextBoxColumn
-            // 
-            this.publisherDataGridViewTextBoxColumn.DataPropertyName = "Publisher";
-            this.publisherDataGridViewTextBoxColumn.HeaderText = "Publisher";
-            this.publisherDataGridViewTextBoxColumn.Name = "publisherDataGridViewTextBoxColumn";
-            // 
-            // pageDataGridViewTextBoxColumn
-            // 
-            this.pageDataGridViewTextBoxColumn.DataPropertyName = "Page";
-            this.pageDataGridViewTextBoxColumn.HeaderText = "Page";
-            this.pageDataGridViewTextBoxColumn.Name = "pageDataGridViewTextBoxColumn";
-            // 
-            // userIdDataGridViewTextBoxColumn
-            // 
-            this.userIdDataGridViewTextBoxColumn.DataPropertyName = "UserId";
-            this.userIdDataGridViewTextBoxColumn.HeaderText = "UserId";
-            this.userIdDataGridViewTextBoxColumn.Name = "userIdDataGridViewTextBoxColumn";
-            // 
-            // userNameDataGridViewTextBoxColumn
-            // 
-            this.userNameDataGridViewTextBoxColumn.DataPropertyName = "UserName";
-            this.userNameDataGridViewTextBoxColumn.HeaderText = "UserName";
-            this.userNameDataGridViewTextBoxColumn.Name = "userNameDataGridViewTextBoxColumn";
-            // 
-            // isBorrowedDataGridViewCheckBoxColumn
-            // 
-            this.isBorrowedDataGridViewCheckBoxColumn.DataPropertyName = "isBorrowed";
-            this.isBorrowedDataGridViewCheckBoxColumn.HeaderText = "isBorrowed";
-            this.isBorrowedDataGridViewCheckBoxColumn.Name = "isBorrowedDataGridViewCheckBoxColumn";
-            // 
-            // borrowedAtDataGridViewTextBoxColumn
-            // 
-            this.borrowedAtDataGridViewTextBoxColumn.DataPropertyName = "BorrowedAt";
-            this.borrowedAtDataGridViewTextBoxColumn.HeaderText = "BorrowedAt";
-            this.borrowedAtDataGridViewTextBoxColumn.Name = "borrowedAtDataGridViewTextBoxColumn";
-            // 
-            // bookBindingSource
-            // 
-            this.bookBindingSource.DataSource = typeof(Library.Book);
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
@@ -426,15 +426,15 @@
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bookBindingSource)).EndInit();
             this.groupBox3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.userBindingSource)).EndInit();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.groupBox4.ResumeLayout(false);
             this.groupBox4.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.userBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bookBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
